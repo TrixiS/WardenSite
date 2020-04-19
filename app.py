@@ -10,7 +10,7 @@ class WardenApp(Flask):
         self.langs = self.load_langs()
 
     def load_langs(self):
-        lang_path = Path(self.root_path).joinpath(self.static_folder).joinpath("langs")
+        lang_path = Path(self.root_path).joinpath(self.static_folder).joinpath("json").joinpath("langs")
         langs = dict()
 
         for file in filter(lambda x: x.is_file(), lang_path.glob("*.json")):
