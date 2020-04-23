@@ -4,3 +4,9 @@ function inviteLink() {
     open(url, '', 'top=50, left=325, width=350, height=600, status=no, scrollbars=yes');
     return false;
 }
+
+function supportLink() {
+    let url = "https://discord.gg/VjsUafD";
+    open(url, '', 'top=50, left=325, width=350, height=600, status=no, scrollbars=yes');
+    return false;
+}
