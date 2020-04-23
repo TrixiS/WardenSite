@@ -1,3 +1,13 @@
 {
-    
+    "langs": {
+        "ru": "Russian"
+    },
+
+    "lang_code": "en",
+    "index": "Home",
+    "commands": "Commands",
+    "invite": "Invite",
+    "support": "Support",
+    "home_text": "Multifunctional Discord bot",
+    "lang_dropdown_text": "Language"
 }

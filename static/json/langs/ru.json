@@ -1,4 +1,13 @@
 {
-    "test": "Тест",
-    "welcome": "Здарова"
+    "langs": {
+        "en": "Английский"
+    },
+
+    "lang_code": "ru",
+    "index": "Главная",
+    "commands": "Команды",
+    "invite": "Добавить",
+    "support": "Поддержка",
+    "home_text": "Многофункциональный Discord бот",
+    "lang_dropdown_text": "Язык"
 }
