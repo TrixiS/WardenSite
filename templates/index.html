@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" src="{{ url_for('static', filename='css/style.css') }}" />
+{% endblock %}
+
+{% block content %}
+    <div id="ctn" class="cover-container d-flex w-100 h-100 p-5 mx-auto flex-column">
+        <div class="home_center">
+            <h1 class="mt-5">Warden</h1>
+            <p class="lead">{{ lang["home_text"] }}</p>
+            <p><a class="btn btn-lg btn-secondary" onclick="inviteLink()" href="">{{ lang["invite"] }}</a></p>    
+        </div>
+    </div>
+{% endblock %}
