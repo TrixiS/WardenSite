@@ -35,21 +35,16 @@
         </ul>
         
         <ul class="navbar-nav mr-right" id="links">
-            <li class="nav-item">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        {{ lang["lang_dropdown_text"] }}
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        {% for code in langs %}
-                            <li type="button">
-                                <a class="dropdown-item" href="/setlang?new_lang={{ code }}">
-                                    {{ lang["langs"][code] }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ lang["lang_dropdown_text"] }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langNavbarDropdown">
+                    {% for code in langs %}
+                        <a class="dropdown-item" href="/setlang?new_lang={{ code }}">
+                            {{ lang["langs"][code] }}
+                        </a>
+                    {% endfor %}
                 </div>
             </li>
             <li class="nav-item">
