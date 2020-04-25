@@ -39,9 +39,9 @@
                 <a class="nav-link dropdown-toggle" href="#" id="langNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ lang["lang_dropdown_text"] }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="langNavbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="langNavbarDropdown" id="lang_choice_dropdown">
                     {% for code in langs %}
-                        <a class="dropdown-item" href="/setlang?new_lang={{ code }}">
+                        <a class="dropdown-item" onclick="setLang('{{ url_for('.setlang') }}', '{{ code }}')">
                             {{ lang["langs"][code] }}
                         </a>
                     {% endfor %}

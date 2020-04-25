@@ -2,3 +2,7 @@
     padding-top: 30px;
     text-align: center;
 }
+
+#lang_choice_dropdown > .dropdown-item {
+    cursor: pointer;
+}

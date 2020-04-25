@@ -1,6 +1,6 @@
 import logging
 
-from flask import request, session, render_template, make_response, url_for, redirect
+from flask import jsonify, request, session, render_template, make_response, url_for, redirect
 from flask_language import Language, current_language
 from app import WardenApp
 from config import Config
@@ -32,7 +32,9 @@ def render_with_lang(*args, **kwargs):
 @app.route("/setlang/")
 def setlang():
     lang.change_language(request.args.get("new_lang") or "en")
-    return redirect(url_for(".index"))
+    return jsonify({
+        "language": str(current_language)
+    })
 
 
 @app.route('/')
@@ -40,5 +42,10 @@ def index():
     return render_with_lang("index.html")
 
 
-app.secret_key = Config.secret_key
+@app.route("/commands/")
+def commands():
+    return render_with_lang("commands.html")
+
+
+app.secret_key = bytes(Config.secret_key, encoding="utf-8")
 app.run(debug=True)
