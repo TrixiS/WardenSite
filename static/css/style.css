@@ -5,4 +5,7 @@
 
 #lang_choice_dropdown > .dropdown-item {
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
